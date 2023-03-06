@@ -1,10 +1,10 @@
-import './App.scss'
-
+import "./App.scss"
+import React from "react"
 
 export default function App () {
     return (
-        <div className='Conteiner'>
-            
+        <div className='conteiner'>
+            s
         </div>
     )
 }
