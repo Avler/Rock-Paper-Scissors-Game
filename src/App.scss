@@ -16,6 +16,7 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         height: 100vh;
         background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
         box-sizing: border-box;
+        
     }
     .cont-header {
         display: flex;
@@ -123,5 +124,25 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         margin: 10px;
         color: hsl(229, 25%, 31%);
         letter-spacing: 2px;
+    }
+    .cont-rules {
+        height: 667px;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 80px;
+        background-color: #fff;
+        margin-top: 80px;
+    }
+    .cont-rules-title {
+        font-family: Barlow ,sans-serif;
+        font-weight: 700;
+        color: hsl(229, 25%, 31%);
+        
+    }
+    .img-rules {
+        width: 300px;
     }
 }
