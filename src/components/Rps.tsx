@@ -18,7 +18,7 @@ export default function Rps() {
                 <div>
                     <p className="header-text">ROCK</p>
                     <p className="header-text">PAPER</p>
-                    <p className="header-text">SCISORS</p>
+                    <p className="header-text">SCISSORS</p>
                 </div>
                 <div className="cont-header-score">
                     <p className="score-text">SCORE</p>
