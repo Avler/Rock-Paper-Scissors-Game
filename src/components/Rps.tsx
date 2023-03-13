@@ -1,20 +1,18 @@
 import Rules from "./Rules"
-import { useState , useRef } from "react"
+import { useState  } from "react"
 
 export default function Rps() {
 
-    const elemRules = useRef<HTMLDivElement>(null)
-    const elmRps = useRef<HTMLDivElement>(null)
-   
-    const scrollToRules = () => {
-        elemRules.current!.scrollIntoView({ behavior: "smooth" });
-      };
-    const scrollToGame = () => {
-        elmRps.current!.scrollIntoView({behavior: "smooth"})
-    }
+  const [showRules , setShowRules] = useState(true)
+
+  const moveToRules = () => {
+    setShowRules(x => !x)
+  }
     return(
-        <div className='conteiner' ref={elmRps}>
-            <div className="cont-header">
+        <div className='conteiner' >
+            {showRules ? 
+            <div>
+                <div className="cont-header">
                 <div>
                     <p className="header-text">ROCK</p>
                     <p className="header-text">PAPER</p>
@@ -38,11 +36,16 @@ export default function Rps() {
             </div>
             <div className="cont-botom">
                 <button className="btn">START</button>
-                <button className="btn" onClick={scrollToRules}>RULES</button>
+                <button className="btn" onClick={moveToRules}>RULES</button>
             </div>
-            <div ref={elemRules} >
-                <Rules backtogame={() => scrollToGame()}/>
-            </div>
+        </div>
+        :
+        <div  >
+            <Rules backtogame={moveToRules}/>
+        </div>
+        }
+            
+            
     </div>
     )
 }
