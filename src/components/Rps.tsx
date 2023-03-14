@@ -1,13 +1,51 @@
 import Rules from "./Rules"
 import { useState  } from "react"
+import {nanoid} from "nanoid"
+import paperimg from  "../assets/images/icon-paper.svg"
+import scissorsimg from "../assets/images/icon-scissors.svg"
+import rockimg from "../assets/images/icon-rock.svg"
+
+interface Rpselements {
+    name: string ;
+    id: number | string ;
+    img:  string ;
+    class: string ;
+}
 
 export default function Rps() {
 
-  const [showRules , setShowRules] = useState(true)
+    const RpsData:Rpselements[] = [
+        {
+            name: "paper" ,
+            id : nanoid() ,
+            img : paperimg,
+            class : "cont-main-elem-paper"
+        } ,
+        {
+            name: "scissors" ,
+            id:  nanoid(),
+            img: scissorsimg ,
+            class: "cont-main-elem-scissors"
+        },
+        {
+            name: "rock" ,
+            id: nanoid(),
+            img: rockimg ,
+            class: "cont-main-elem-rock"
+        }
+    ] 
 
-  const moveToRules = () => {
+    const [showRules , setShowRules] = useState(true)
+    const [rps , setRps] = useState(RpsData)
+
+const moveToRules = () => {
     setShowRules(x => !x)
   }
+
+  const Rpselem = rps.map(elem => {
+    return <div className={elem.class}><img src={elem.img} alt={elem.name}/></div>
+  })
+
     return(
         <div className='conteiner' >
             {showRules ? 
@@ -24,18 +62,11 @@ export default function Rps() {
                 </div>
             </div>
             <div className="cont-main">
-                <div className="cont-main-elem-paper">
-                    <img src="src\assets\images\icon-paper.svg" alt="paper" />
-                </div>
-                <div className="cont-main-elem-scissors">
-                    <img src="src\assets\images\icon-scissors.svg" alt="paper" />
-                </div>
-                <div className="cont-main-elem-rock">
-                    <img src="src\assets\images\icon-rock.svg" alt="paper" />
-                </div>
+               {Rpselem}
+               
             </div>
             <div className="cont-botom">
-                <button className="btn">START</button>
+                
                 <button className="btn" onClick={moveToRules}>RULES</button>
             </div>
         </div>
