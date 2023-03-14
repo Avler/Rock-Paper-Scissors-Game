@@ -1,15 +1,14 @@
 import Rules from "./Rules"
 import { useState  } from "react"
 import {nanoid} from "nanoid"
-import paperimg from  "../assets/images/icon-paper.svg"
-import scissorsimg from "../assets/images/icon-scissors.svg"
-import rockimg from "../assets/images/icon-rock.svg"
+
 
 interface Rpselements {
     name: string ;
     id: number | string ;
     img:  string ;
     class: string ;
+    selected : boolean ;
 }
 
 export default function Rps() {
@@ -18,20 +17,23 @@ export default function Rps() {
         {
             name: "paper" ,
             id : nanoid() ,
-            img : paperimg,
-            class : "cont-main-elem-paper"
+            img : "src/assets/images/icon-paper.svg",
+            class : "cont-main-elem-paper",
+            selected : false
         } ,
         {
             name: "scissors" ,
             id:  nanoid(),
-            img: scissorsimg ,
-            class: "cont-main-elem-scissors"
+            img: "src/assets/images/icon-scissors.svg" ,
+            class: "cont-main-elem-scissors",
+            selected : false
         },
         {
             name: "rock" ,
             id: nanoid(),
-            img: rockimg ,
-            class: "cont-main-elem-rock"
+            img: "src/assets/images/icon-rock.svg" ,
+            class: "cont-main-elem-rock",
+            selected : false
         }
     ] 
 
