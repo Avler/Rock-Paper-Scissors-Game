@@ -79,7 +79,20 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         margin-left: 50px;
        
     }
+    .cont-main-elem-paper-selected {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(230, 89%, 62%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        
+       
+    }
     .cont-main-elem-paper img {
+        padding-top: 10px;
+    }
+    .cont-main-elem-paper-selected img {
         padding-top: 10px;
     }
     .cont-main-elem-scissors {
@@ -95,6 +108,18 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
     .cont-main-elem-scissors img {
         padding-top: 10px;
     }
+    .cont-main-elem-scissors-selected {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(39, 89%, 49%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;        
+        
+    }
+    .cont-main-elem-scissors-selected img {
+        padding-top: 10px;
+    }
     .cont-main-elem-rock {
         background-color: hsl(0, 0%, 89%);
         outline: 10px solid hsl(349, 71%, 52%);;
@@ -107,6 +132,18 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         margin-top: 30px;
     }
     .cont-main-elem-rock img {
+        padding-top: 15px;
+    }
+    .cont-main-elem-rock-selected {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(349, 71%, 52%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        
+    }
+    .cont-main-elem-rock-selected img {
         padding-top: 15px;
     }
     .cont-botom {
@@ -143,5 +180,14 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
     }
     .img-rules {
         width: 300px;
+    }
+    .cont-match {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 130px;
+        width: 100%;
+        height: 240px;
+        gap: 80px;
     }
 }

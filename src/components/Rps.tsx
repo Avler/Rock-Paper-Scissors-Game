@@ -1,6 +1,7 @@
 import Rules from "./Rules"
 import { useState  } from "react"
 import {nanoid} from "nanoid"
+import RpsResult from "./Rpsresult"
 
 
 interface Rpselements {
@@ -39,13 +40,26 @@ export default function Rps() {
 
     const [showRules , setShowRules] = useState(true)
     const [rps , setRps] = useState(RpsData)
+    const [selected , setSelected] = useState(false)
 
-const moveToRules = () => {
+    const moveToRules = () => {
     setShowRules(x => !x)
   }
-
+  const choosen = (id:number | string) => {
+    const randomEl = Math.floor(Math.random() * RpsData.length)
+    setSelected(true)
+    setRps(elm => elm.map(elem => {
+     return   elem.id === id ? {...elem , selected: true} : elem
+    } ))
+    setRps(elm => elm.map((elme , index ) => {
+       return index === randomEl ? { ...elme, selected: true } : elme
+       
+    }) )
+}
+   console.log (rps)
   const Rpselem = rps.map(elem => {
-    return <div className={elem.class}><img src={elem.img} alt={elem.name}/></div>
+ 
+    return <div className={elem.class} onClick={() => choosen(elem.id)}><img src={elem.img} alt={elem.name}/></div>
   })
 
     return(
@@ -63,10 +77,15 @@ const moveToRules = () => {
                     <p className="score">12</p>
                 </div>
             </div>
+            {selected ? 
+                <RpsResult 
+                    data = {rps}
+                /> 
+            :
             <div className="cont-main">
-               {Rpselem}
-               
+              {Rpselem }
             </div>
+            }
             <div className="cont-botom">
                 
                 <button className="btn" onClick={moveToRules}>RULES</button>
