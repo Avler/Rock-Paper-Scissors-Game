@@ -187,7 +187,15 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         text-align: center;
         margin-top: 130px;
         width: 100%;
-        height: 240px;
+        height: 180px;
         gap: 80px;
+    }
+    .resoult-text {
+        color: #fff;
+        font-size: 30px;
+        font-family: Barlow , sans-serif;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
     }
 }
