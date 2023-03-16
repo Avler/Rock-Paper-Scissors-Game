@@ -23,11 +23,11 @@ export default function RpsResult (props:any) {
             (objects[0].name === "paper" && objects[1].name === "rock") || 
             (objects[0].name === "scissors" && objects[1].name === "paper") 
             ) {
-                setResult("YOU WIN")
+                setResult("YOU WIN !")
             } else if ( objects[0].name === objects[1].name) {
-                setResult("TIE GAME ")
+                setResult("TIE GAME !")
             } else {
-                setResult("YOU LOSE")
+                setResult("YOU LOSE !")
             }
         }
     }, [objects])
