@@ -56,7 +56,11 @@ export default function Rps() {
        
     }) )
 }
-   console.log (rps)
+    const playAgain = () => {
+        setSelected(false)
+        setRps(RpsData)
+    }
+
   const Rpselem = rps.map(elem => {
  
     return <div className={elem.class} onClick={() => choosen(elem.id)}><img src={elem.img} alt={elem.name}/></div>
@@ -80,6 +84,7 @@ export default function Rps() {
             {selected ? 
                 <RpsResult 
                     data = {rps}
+                    playagain = {playAgain}
                 /> 
             :
             <div className="cont-main">

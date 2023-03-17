@@ -48,10 +48,14 @@ export default function RpsResult (props:any) {
   )
     return (
         <>
-        <div className="cont-match">
-            {resultelm}  
-        </div>
-        <p className="resoult-text">{result}</p>
+            <div className="cont-match">
+                {resultelm}  
+            </div>
+            <div className="cont-match-sub">
+                <p className="resoult-text">{result}</p>
+                <button className="btn-playagain" onClick={() => props.playagain()}>PLAY AGAIN</button>
+            </div>
+            
         </>
         
     )
