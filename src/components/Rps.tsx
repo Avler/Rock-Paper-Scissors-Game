@@ -46,9 +46,11 @@ export default function Rps() {
     const [rps , setRps] = useState(RpsData)
     const [selected , setSelected] = useState(false)
     const [score , setScore] = useState(0)
+    const [gameStop , setGameStop] = useState(false)
 
     const moveToRules = () => {
     setShowRules(x => !x)
+    setGameStop(true)
   }
   const choosen = (id:number | string) => {
     const randomEl = Math.floor(Math.random() * RpsData.length)
@@ -64,6 +66,7 @@ export default function Rps() {
     const playAgain = () => {
         setSelected(false)
         setRps(RpsData)
+        setGameStop(false)
     }
     const scoreChange = (dataScore:number) => {
         setScore(dataScore)
@@ -94,6 +97,7 @@ export default function Rps() {
                     playagain = {playAgain}
                     score = {scoreChange}
                     scoreValue = {score}
+                    gamestop = {gameStop}
                 /> 
             :
             <div className="cont-main">
