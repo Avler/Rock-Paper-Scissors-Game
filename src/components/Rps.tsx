@@ -10,6 +10,7 @@ interface Rpselements {
     img:  string ;
     class: string ;
     selected : boolean ;
+    selectedbot : boolean;
 }
 
 export default function Rps() {
@@ -20,21 +21,24 @@ export default function Rps() {
             id : nanoid() ,
             img : "src/assets/images/icon-paper.svg",
             class : "cont-main-elem-paper",
-            selected : false
+            selected : false ,
+            selectedbot : false
         } ,
         {
             name: "scissors" ,
             id:  nanoid(),
             img: "src/assets/images/icon-scissors.svg" ,
             class: "cont-main-elem-scissors",
-            selected : false
+            selected : false,
+            selectedbot : false
         },
         {
             name: "rock" ,
             id: nanoid(),
             img: "src/assets/images/icon-rock.svg" ,
             class: "cont-main-elem-rock",
-            selected : false
+            selected : false,
+            selectedbot : false
         }
     ] 
 
@@ -52,7 +56,7 @@ export default function Rps() {
      return   elem.id === id ? {...elem , selected: true} : elem
     } ))
     setRps(elm => elm.map((elme , index ) => {
-       return index === randomEl ? { ...elme, selected: true } : elme
+       return index === randomEl ? { ...elme, selectedbot: true } : elme
        
     }) )
 }
