@@ -45,6 +45,7 @@ export default function Rps() {
     const [showRules , setShowRules] = useState(true)
     const [rps , setRps] = useState(RpsData)
     const [selected , setSelected] = useState(false)
+    const [score , setScore] = useState(0)
 
     const moveToRules = () => {
     setShowRules(x => !x)
@@ -64,7 +65,9 @@ export default function Rps() {
         setSelected(false)
         setRps(RpsData)
     }
-
+    const scoreChange = (dataScore:number) => {
+        setScore(dataScore)
+    }
   const Rpselem = rps.map(elem => {
  
     return <div className={elem.class} onClick={() => choosen(elem.id)}><img src={elem.img} alt={elem.name}/></div>
@@ -82,13 +85,15 @@ export default function Rps() {
                 </div>
                 <div className="cont-header-score">
                     <p className="score-text">SCORE</p>
-                    <p className="score">12</p>
+                    <p className="score">{score }</p>
                 </div>
             </div>
             {selected ? 
                 <RpsResult 
                     data = {rps}
                     playagain = {playAgain}
+                    score = {scoreChange}
+                    scoreValue = {score}
                 /> 
             :
             <div className="cont-main">

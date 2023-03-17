@@ -11,13 +11,17 @@ interface dataElm {
 
 export default function RpsResult (props:any) {
     const [result , setResult] = useState("")
+    const [dataScore , setDataScore] = useState(props.scoreValue)
     const data = props.data
     let objclass:string
     
     const selectedPlayer = data.find((elm:dataElm) => elm.selected)
     const selectedBot = data.find((elm:dataElm) => elm.selectedbot)
     
-    
+    console.log(dataScore)
+    const dataHandle = () => {
+        props.score(dataScore)
+    }
     useEffect(() => {
          
             if ((selectedPlayer.name === "rock" && selectedBot.name === "scissors") || 
@@ -25,14 +29,18 @@ export default function RpsResult (props:any) {
             (selectedPlayer.name === "scissors" && selectedBot.name === "paper") 
             ) {
                 setResult("YOU WIN !")
+                setDataScore((x:number) => x + 0.5)
+                
             } else if ( selectedPlayer.name === selectedBot.name) {
                 setResult("TIE GAME !")
             } else {
                 setResult("YOU LOSE !")
+                setDataScore((x:number) => x - 0.5)
             }
         
     }, [])
 
+    dataHandle()
     const resultelm =  data.map( (elem:dataElm ) => {
     
         if(elem.name === "paper") {
