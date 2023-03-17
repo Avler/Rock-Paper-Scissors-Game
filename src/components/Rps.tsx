@@ -73,7 +73,7 @@ export default function Rps() {
     }
   const Rpselem = rps.map(elem => {
  
-    return <div className={elem.class} onClick={() => choosen(elem.id)}><img src={elem.img} alt={elem.name}/></div>
+    return <div key={elem.id} className={elem.class} onClick={() => choosen(elem.id)}><img src={elem.img} alt={elem.name}/></div>
   })
 
     return(
@@ -98,6 +98,7 @@ export default function Rps() {
                     score = {scoreChange}
                     scoreValue = {score}
                     gamestop = {gameStop}
+                    
                 /> 
             :
             <div className="cont-main">
@@ -111,7 +112,9 @@ export default function Rps() {
         </div>
         :
         <div  >
-            <Rules backtogame={moveToRules}/>
+            <Rules 
+            backtogame={moveToRules}
+            />
         </div>
         }
             

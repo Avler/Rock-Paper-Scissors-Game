@@ -49,10 +49,10 @@ export default function RpsResult (props:any) {
                 }
 
             }
-        
-    }, [])
+            dataHandle()
+    }, [dataScore])
 
-    dataHandle()
+    
     const resultelm =  data.map( (elem:dataElm ) => {
     
         if(elem.name === "paper") {
@@ -63,7 +63,7 @@ export default function RpsResult (props:any) {
             objclass = "cont-main-elem-rock-selected"
         }
 
-    return elem.selected ?  <div className={objclass}><img src={elem.img} alt={elem.name}/></div> :null  
+    return elem.selected ?  <div key={elem.id} className={objclass}><img src={elem.img} alt={elem.name}/></div> :null  
   } )
   
   const resultelmbot =  data.map( (elem:dataElm ) => {
@@ -76,7 +76,7 @@ export default function RpsResult (props:any) {
         objclass = "cont-main-elem-rock-selected"
     }
 
-    return elem.selectedbot ? <div className={objclass}><img src={elem.img} alt={elem.name}/></div> :null
+    return elem.selectedbot ? <div key={elem.id} className={objclass}><img src={elem.img} alt={elem.name}/></div> :null
 }  
 
   )
