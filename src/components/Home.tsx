@@ -57,7 +57,7 @@ export default function Home () {
                 <div className="home-cont-img">
                  {Rpslselem}
                 </div>
-                 <p className="home-text">Rock Paper Scissors Lizard Spock Game</p>
+                 <p className="home-text">Rock Paper Scissors Lizard Spock Game !</p>
                <Link to="rpsls"><button className="home-btn">RPSLS</button></Link> 
             </div>
             
