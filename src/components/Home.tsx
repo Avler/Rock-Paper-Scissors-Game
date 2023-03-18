@@ -49,7 +49,7 @@ export default function Home () {
                 <div className="home-cont-img">
                  {Rpselem}
                 </div>
-                <p className="home-text">Rock Paper Scissors Game</p>
+                <p className="home-text">Rock Paper Scissors Game !</p>
                <Link to="/rps"><button className="home-btn">RPS</button></Link> 
             </div>
             
