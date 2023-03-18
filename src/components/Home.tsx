@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import { RpsData } from "./Data"
 import { RpslsData } from "./Data"
 import { Link } from "react-router-dom"
@@ -58,7 +58,7 @@ export default function Home () {
                  {Rpslselem}
                 </div>
                  <p className="home-text">Rock Paper Scissors Lizard Spock Game</p>
-                <button className="home-btn">RPSLS</button>
+               <Link to="rpsls"><button className="home-btn">RPSLS</button></Link> 
             </div>
             
         </div>

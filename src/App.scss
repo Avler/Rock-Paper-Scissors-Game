@@ -133,6 +133,11 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         padding: 10px;
         border-radius: 5px;
     }
+    .header-text-rpsls {
+        font-family: Barlow , sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+    }
     .header-text {
         font-family: Barlow , sans-serif;
         font-weight: 700;
@@ -171,6 +176,91 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         height: 240px;
         margin-bottom: 50px;
     }
+    .cont-main-rpsls {
+        background-image: url('/src/assets/images/bg-pentagon.svg');
+        background-repeat: no-repeat;
+        background-size: 240px;
+        background-position: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        text-align: center;
+        margin-top: 130px;
+        width: 100%;
+        height: 240px;
+        margin-bottom: 50px;
+    }
+    .cont-main-elem-paper-rpsls {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(230, 89%, 62%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        margin-left: 60px;
+        margin-top: 70px;
+       grid-column: 2;
+    }
+    .cont-main-elem-paper-rpsls img {
+        padding-top: 10px;
+    }
+    .cont-main-elem-scissors-rpsls {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(39, 89%, 49%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        margin-right: -40px;
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: end;
+    }
+    .cont-main-elem-spock-rpsls {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(189, 59%, 53%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        grid-row: 2;
+        margin-top: -80px;
+        margin-left: 50px;
+    }
+    .cont-main-elem-spock-rpsls img {
+        padding-left: 6px;
+        padding-top: 7px;
+    }
+    .cont-main-elem-rock-rpsls {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(349, 71%, 52%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        grid-column: 2;
+        grid-row: 2;
+       margin-left: 50px;
+       margin-top: 30px;
+    }
+    .cont-main-elem-rock-rpsls img {
+        padding-top: 13px;
+    }
+    .cont-main-elem-lizard-rpsls {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(261, 73%, 60%);;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        justify-self: end;
+        margin-top: -80px;
+        margin-right: 40px;
+    }
+    .cont-main-elem-lizard-rpsls img {
+        width: 50px;
+        padding-top: 13px;
+    }
     .cont-main-elem-paper {
         background-color: hsl(0, 0%, 89%);
         outline: 10px solid hsl(230, 89%, 62%);;
@@ -188,8 +278,30 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         width: 100px;
         height: 100px;
         text-align: center;
-        
-       
+         
+    }
+    .cont-main-elem-lizard-selected {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(261, 73%, 60%);;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+    .cont-main-elem-lizard-selected img {
+        padding-top: 19px;
+    }
+    .cont-main-elem-spock-selected {
+        background-color: hsl(0, 0%, 89%);
+        outline: 10px solid hsl(189, 59%, 53%);;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+    .cont-main-elem-spock-selected img {
+        padding-top: 19px;
+        padding-left: 5px;
     }
     .cont-main-elem-paper img {
         padding-top: 10px;
@@ -209,6 +321,9 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         
     }
     .cont-main-elem-scissors img {
+        padding-top: 10px;
+    }
+    .cont-main-elem-scissors-rpsls img {
         padding-top: 10px;
     }
     .cont-main-elem-scissors-selected {
@@ -254,12 +369,16 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
     }
     .cont-botom {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .btn {
         font-family: Barlow , sans-serif;
         font-weight: 600;
         background-color: hsl(0, 0%, 89%);
-        width: 120px;
+        width: 130px;
         height: 40px;
         border-radius: 5px;
         border: none;
@@ -311,12 +430,13 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         font-family: Barlow , sans-serif;
         font-weight: 600;
         background-color: hsl(0, 0%, 89%);
-        width: 120px;
+        width: 130px;
         height: 40px;
         border-radius: 5px;
         border: none;
         color: hsl(229, 25%, 31%);
         letter-spacing: 2px;
-        margin-top: 50px;
+        margin-top: 90px;
+        margin-bottom: 10px;
     }
 }

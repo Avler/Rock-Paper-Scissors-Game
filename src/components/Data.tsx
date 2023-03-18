@@ -42,7 +42,7 @@ export const RpslsData:Rpselements[] = [
         name: "paper" ,
         id : nanoid() ,
         img : "src/assets/images/icon-paper.svg",
-        class : "cont-main-elem-paper",
+        class : "cont-main-elem-paper-rpsls",
         selected : false ,
         selectedbot : false
     } ,
@@ -50,7 +50,7 @@ export const RpslsData:Rpselements[] = [
         name: "scissors" ,
         id:  nanoid(),
         img: "src/assets/images/icon-scissors.svg" ,
-        class: "cont-main-elem-scissors",
+        class: "cont-main-elem-scissors-rpsls",
         selected : false,
         selectedbot : false
     },
@@ -58,7 +58,7 @@ export const RpslsData:Rpselements[] = [
         name: "rock" ,
         id: nanoid(),
         img: "src/assets/images/icon-rock.svg" ,
-        class: "cont-main-elem-rock",
+        class: "cont-main-elem-rock-rpsls",
         selected : false,
         selectedbot : false
     }
@@ -67,7 +67,7 @@ export const RpslsData:Rpselements[] = [
         name: "lizard" ,
         id: nanoid(),
         img: "src/assets/images/icon-lizard.svg" ,
-        class: "cont-main-elem-rock",
+        class: "cont-main-elem-lizard-rpsls",
         selected : false,
         selectedbot : false
     }
@@ -76,7 +76,7 @@ export const RpslsData:Rpselements[] = [
         name: "spock" ,
         id: nanoid(),
         img: "src/assets/images/icon-spock.svg" ,
-        class: "cont-main-elem-rock",
+        class: "cont-main-elem-spock-rpsls",
         selected : false,
         selectedbot : false
     }

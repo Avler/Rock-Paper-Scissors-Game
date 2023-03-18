@@ -29,7 +29,15 @@ export default function RpsResult (props:any) {
             
             if ((selectedPlayer.name === "rock" && selectedBot.name === "scissors") || 
             (selectedPlayer.name === "paper" && selectedBot.name === "rock") || 
-            (selectedPlayer.name === "scissors" && selectedBot.name === "paper") 
+            (selectedPlayer.name === "scissors" && selectedBot.name === "paper" ||
+             selectedPlayer.name === "rock" && selectedBot.name === "lizard" ||
+             selectedPlayer.name === "scissors" && selectedBot.name === "lizard" ||
+             selectedPlayer.name === "paper" && selectedBot.name === "spock" ||
+             selectedPlayer.name === "lizard" && selectedBot.name === "spock" ||
+             selectedPlayer.name === "lizard" && selectedBot.name === "paper" ||
+             selectedPlayer.name === "spock" && selectedBot.name === "scissors" ||
+             selectedPlayer.name === "spock" && selectedBot.name === "rock" 
+            ) 
             ) {
                     setResult("YOU WIN !")
                    if(!rulesChecking) {
@@ -59,8 +67,12 @@ export default function RpsResult (props:any) {
            objclass  = "cont-main-elem-paper-selected"
         } else if (elem.name === "scissors") {
             objclass = "cont-main-elem-scissors-selected"
-        } else {
+        } else if (elem.name === "rock" ){
             objclass = "cont-main-elem-rock-selected"
+        } else if (elem.name === "spock") {
+            objclass = "cont-main-elem-spock-selected"
+        } else {
+            objclass = "cont-main-elem-lizard-selected"
         }
 
     return elem.selected ?  <div key={elem.id} className={objclass}><img src={elem.img} alt={elem.name}/></div> :null  
@@ -72,8 +84,12 @@ export default function RpsResult (props:any) {
        objclass  = "cont-main-elem-paper-selected"
     } else if (elem.name === "scissors") {
         objclass = "cont-main-elem-scissors-selected"
-    } else {
+    } else if (elem.name === "rock" ){
         objclass = "cont-main-elem-rock-selected"
+    } else if (elem.name === "spock") {
+        objclass = "cont-main-elem-spock-selected"
+    } else {
+        objclass = "cont-main-elem-lizard-selected"
     }
 
     return elem.selectedbot ? <div key={elem.id} className={objclass}><img src={elem.img} alt={elem.name}/></div> :null

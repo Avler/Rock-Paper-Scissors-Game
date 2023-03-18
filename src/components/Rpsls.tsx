@@ -1,17 +1,17 @@
-import Rules from "./Rules"
+import Rulesrpsls from "./Rulesrpsls"
 import { useState  } from "react"
 import RpsResult from "./Rpsresult"
-import { RpsData } from "./Data"
+import { RpslsData } from "./Data"
 import { Link } from "react-router-dom"
 
 
 
-export default function Rps() {
+export default function Rpsls() {
 
     
 
     const [showRules , setShowRules] = useState(true)
-    const [rps , setRps] = useState(RpsData)
+    const [rps , setRps] = useState(RpslsData)
     const [selected , setSelected] = useState(false)
     const [score , setScore] = useState(0)
     const [gameStop , setGameStop] = useState(false)
@@ -21,7 +21,7 @@ export default function Rps() {
     setGameStop(true)
   }
   const choosen = (id:number | string) => {
-    const randomEl = Math.floor(Math.random() * RpsData.length)
+    const randomEl = Math.floor(Math.random() * RpslsData.length)
     setSelected(true)
     setRps(elm => elm.map(elem => {
      return   elem.id === id ? {...elem , selected: true} : elem
@@ -33,7 +33,7 @@ export default function Rps() {
 }
     const playAgain = () => {
         setSelected(false)
-        setRps(RpsData)
+        setRps(RpslsData)
         setGameStop(false)
     }
     const scoreChange = (dataScore:number) => {
@@ -50,9 +50,11 @@ export default function Rps() {
             <div>
                 <div className="cont-header">
                 <div>
-                    <p className="header-text">ROCK</p>
-                    <p className="header-text">PAPER</p>
-                    <p className="header-text">SCISSORS</p>
+                    <p className="header-text-rpsls">ROCK</p>
+                    <p className="header-text-rpsls">PAPER</p>
+                    <p className="header-text-rpsls">SCISSORS</p>
+                    <p className="header-text-rpsls">LIZARD</p>
+                    <p className="header-text-rpsls">SPOCK</p>
                 </div>
                 <div className="cont-header-score">
                     <p className="score-text">SCORE</p>
@@ -69,7 +71,7 @@ export default function Rps() {
                     
                 /> 
             :
-            <div className="cont-main">
+            <div className="cont-main-rpsls">
               {Rpselem }
             </div>
             }
@@ -80,7 +82,7 @@ export default function Rps() {
         </div>
         :
         <div  >
-            <Rules 
+            <Rulesrpsls 
             backtogame={moveToRules}
             />
         </div>
