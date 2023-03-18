@@ -1,46 +1,14 @@
 import Rules from "./Rules"
 import { useState  } from "react"
-import {nanoid} from "nanoid"
 import RpsResult from "./Rpsresult"
+import { RpsData } from "./Data"
 
 
-interface Rpselements {
-    name: string ;
-    id: number | string ;
-    img:  string ;
-    class: string ;
-    selected : boolean ;
-    selectedbot : boolean;
-}
+
 
 export default function Rps() {
 
-    const RpsData:Rpselements[] = [
-        {
-            name: "paper" ,
-            id : nanoid() ,
-            img : "src/assets/images/icon-paper.svg",
-            class : "cont-main-elem-paper",
-            selected : false ,
-            selectedbot : false
-        } ,
-        {
-            name: "scissors" ,
-            id:  nanoid(),
-            img: "src/assets/images/icon-scissors.svg" ,
-            class: "cont-main-elem-scissors",
-            selected : false,
-            selectedbot : false
-        },
-        {
-            name: "rock" ,
-            id: nanoid(),
-            img: "src/assets/images/icon-rock.svg" ,
-            class: "cont-main-elem-rock",
-            selected : false,
-            selectedbot : false
-        }
-    ] 
+    
 
     const [showRules , setShowRules] = useState(true)
     const [rps , setRps] = useState(RpsData)

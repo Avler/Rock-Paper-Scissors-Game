@@ -18,6 +18,108 @@ $rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
         box-sizing: border-box;
         overflow:hidden ;
     }
+    .home-title {
+        color: #fff;
+        font-family: Barlow ,sans-serif;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .home-cont {
+        text-align: center;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between ;
+        align-items: center;
+        padding-right: 10px;
+    }
+    .home-cont-img {
+        display: flex;
+    }
+    .cont-main-elem-paper-home {
+        background-color: hsl(0, 0%, 89%);
+        outline: 5px solid hsl(230, 89%, 62%);;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+         
+    }
+    .cont-main-elem-paper-home img{
+      width: 25px;
+      padding-top: 10px;
+    }
+    .cont-main-elem-rock-home {
+        background-color: hsl(0, 0%, 89%);
+        outline: 5px solid hsl(349, 71%, 52%);;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+         
+    }
+    .cont-main-elem-rock-home img{
+      width: 25px;
+      padding-top: 12px;
+    }
+    .cont-main-elem-scissors-home {
+        background-color: hsl(0, 0%, 89%);
+        outline: 5px solid hsl(39, 89%, 49%);;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+         
+    }
+    .cont-main-elem-scissors-home img{
+      width: 25px;
+      padding-top: 10px;
+    }
+    .cont-main-elem-lizard-home {
+        background-color: hsl(0, 0%, 89%);
+        outline: 5px solid hsl(261, 73%, 60%);;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+         
+    }
+    .cont-main-elem-lizard-home img{
+      width: 25px;
+      padding-top: 13px;
+    }
+    .cont-main-elem-spock-home {
+        background-color: hsl(0, 0%, 89%);
+        outline: 5px solid hsl(189, 59%, 53%);;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+         
+    }
+    .cont-main-elem-spock-home img{
+      width: 25px;
+      padding-top: 7px;
+      padding-left: 4px;
+    }
+    .home-btn {
+        font-family: Barlow , sans-serif;
+        font-weight: 600;
+        background-color: hsl(0, 0%, 89%);
+        width: 120px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        margin: 10px;
+        color: hsl(229, 25%, 31%);
+        letter-spacing: 2px;
+    }
+    .home-text {
+        color:#fff;
+        text-align: center;
+        padding-top: 20px;
+        font-size: 20px;
+    }
     .cont-header {
         display: flex;
         justify-content: center;
