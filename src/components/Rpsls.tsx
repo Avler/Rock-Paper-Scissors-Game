@@ -75,7 +75,7 @@ export default function Rpsls() {
               {Rpselem }
             </div>
             }
-            <div className="cont-botom">
+            <div className="cont-botom-rpsls">
                 {!selected ? <Link to="/"><button className="btn" >BACK TO GAME SELECT</button></Link> : null}
                 <button className="btn" onClick={moveToRules}>RULES</button>
             </div>
