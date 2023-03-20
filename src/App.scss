@@ -255,7 +255,7 @@ $breakpoint-mid: 556px;
         width: 50px;
         padding-top: 13px;
     }
-    .cont-main-elem-paper {
+    .cont-main-elem-paper , .cont-main-elem-paper-selected  {
         background-color: hsl(0, 0%, 89%);
         outline: 10px solid hsl(230, 89%, 62%);;
         border-radius: 50%;
@@ -266,12 +266,8 @@ $breakpoint-mid: 556px;
         justify-self: end;
     }
     .cont-main-elem-paper-selected {
-        background-color: hsl(0, 0%, 89%);
-        outline: 10px solid hsl(230, 89%, 62%);;
-        border-radius: 50%;
         width: 100px;
         height: 100px;
-        text-align: center;
     }
     .cont-main-elem-lizard-selected {
         background-color: hsl(0, 0%, 89%);
