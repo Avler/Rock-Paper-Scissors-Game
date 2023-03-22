@@ -39,16 +39,16 @@ export default function RpsResult (props:any) {
              selectedPlayer.name === "spock" && selectedBot.name === "rock" 
             ) 
             ) {
-                    setResult("YOU WIN !")
+                    setResult("YOU WIN ")
                    if(!rulesChecking) {
                     setDataScore(props.scoreValue)
                     setDataScore((x:number) => x +  1)
                 }
                 
             } else if ( selectedPlayer.name === selectedBot.name) {
-                setResult("TIE GAME !")
+                setResult("TIE GAME ")
             } else {
-                setResult("YOU LOSE !")
+                setResult("YOU LOSE ")
                 if(dataScore > 0 ){
                     if(!rulesChecking) {
                         setDataScore(props.scoreValue)
