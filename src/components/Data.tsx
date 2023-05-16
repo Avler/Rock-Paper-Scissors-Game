@@ -8,7 +8,7 @@ import iconRock from "../assets/images/icon-paper.svg"
 interface Rpselements {
     name: string ;
     id: number | string ;
-    img:  any ;
+    img:  string ;
     class: string ;
     selected : boolean ;
     selectedbot : boolean;
@@ -19,7 +19,7 @@ export const RpsData:Rpselements[] = [
     {
         name: "paper" ,
         id : nanoid() ,
-        img : {iconPaper},
+        img : iconPaper,
         class : "cont-main-elem-paper",
         selected : false ,
         selectedbot : false
@@ -27,7 +27,7 @@ export const RpsData:Rpselements[] = [
     {
         name: "scissors" ,
         id:  nanoid(),
-        img: {iconScissors} ,
+        img: iconScissors ,
         class: "cont-main-elem-scissors",
         selected : false,
         selectedbot : false
@@ -35,7 +35,7 @@ export const RpsData:Rpselements[] = [
     {
         name: "rock" ,
         id: nanoid(),
-        img: {iconRock} ,
+        img: iconRock ,
         class: "cont-main-elem-rock",
         selected : false,
         selectedbot : false
@@ -46,7 +46,7 @@ export const RpslsData:Rpselements[] = [
     {
         name: "paper" ,
         id : nanoid() ,
-        img : {iconPaper},
+        img : iconPaper,
         class : "cont-main-elem-paper-rpsls",
         selected : false ,
         selectedbot : false
@@ -54,7 +54,7 @@ export const RpslsData:Rpselements[] = [
     {
         name: "scissors" ,
         id:  nanoid(),
-        img: {iconScissors} ,
+        img: iconScissors ,
         class: "cont-main-elem-scissors-rpsls",
         selected : false,
         selectedbot : false
@@ -62,7 +62,7 @@ export const RpslsData:Rpselements[] = [
     {
         name: "rock" ,
         id: nanoid(),
-        img: {iconRock} ,
+        img: iconRock ,
         class: "cont-main-elem-rock-rpsls",
         selected : false,
         selectedbot : false
@@ -71,7 +71,7 @@ export const RpslsData:Rpselements[] = [
     {
         name: "lizard" ,
         id: nanoid(),
-        img: {iconLizard} ,
+        img: iconLizard ,
         class: "cont-main-elem-lizard-rpsls",
         selected : false,
         selectedbot : false
@@ -80,7 +80,7 @@ export const RpslsData:Rpselements[] = [
     {
         name: "spock" ,
         id: nanoid(),
-        img: {iconSpock} ,
+        img: iconSpock ,
         class: "cont-main-elem-spock-rpsls",
         selected : false,
         selectedbot : false
