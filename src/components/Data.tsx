@@ -3,7 +3,7 @@ import iconPaper from "../assets/images/icon-paper.svg"
 import iconScissors from "../assets/images/icon-scissors.svg"
 import iconLizard from "../assets/images/icon-lizard.svg"
 import iconSpock from "../assets/images/icon-spock.svg"
-import iconRock from "../assets/images/icon-paper.svg"
+import iconRock from "../assets/images/icon-rock.svg"
 
 interface Rpselements {
     name: string ;
